@@ -8,7 +8,7 @@ Brand fonts and colors are documented in `BRAND.md`. All design tokens are CSS v
 
 - `index.html`: Home page
 - `rooms.html`: Rooms page, rendered from the single room list in `assets/js/rooms.js`
-- `local-guide.html`: placeholder page for the Explore tiles
+- `local-guide.html`: Local Guide page, with styles in `assets/css/local-guide.css` and behavior in `assets/js/local-guide.js`
 - `assets/css/style.css`, `assets/css/rooms.css`, `assets/js/main.js`, `assets/js/rooms-page.js`, `assets/img/`, `assets/video/`
 - `BRAND.md`: extracted brand values
 - `render.yaml`: Render static site definition
@@ -38,6 +38,7 @@ If this folder sits inside a larger repository, set `rootDir: blindpass` on the 
 3. **[CONFIRM IMAGE] Explore tile images.** Each tile is a neutral colored block until licensed photos exist. Marked per tile in `index.html`. To add a photo, replace the `.tile__img` span with `<img class="tile__img" src="..." alt="..." loading="lazy">`.
 4. **[CONFIRM PHOTOS] Queen Studio Suite.** Cloudbeds only has low-resolution `microsoftteams-image` photos for this room. Marked in `rooms.html` and `assets/js/rooms.js`.
 5. **Exact pet fee and limits.** The Rooms page says only that fees apply and are discounted the longer guests stay. Marked in `rooms.html`.
+6. **[CONFIRM IMAGE] Local Guide images.** The five place rows use styled tiles until licensed photos exist. The hero and closing band are stills from the current site's hero video, because no unused property photo exists in `assets/img`. Marked in `local-guide.html`.
 
 ## Other Notes For The WordPress Build
 

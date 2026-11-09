@@ -1,0 +1,265 @@
+/* Local Guide page only. Builds on style.css and rooms.css. */
+.page-guide {
+  --text-h2: clamp(28px, 3.4vw, 48px);
+  --filter-height: 72px;
+}
+
+.page-guide .hero__eyebrow { margin-bottom: 8px; }
+
+.guide-anchor { scroll-margin-top: var(--filter-height); }
+
+/* ---------- 2. Jump nav ---------- */
+#jump-sentinel { height: 1px; }
+
+.jump-nav {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  background: var(--color-cream);
+  transition: box-shadow 0.25s;
+}
+.jump-nav.is-stuck { box-shadow: var(--shadow); }
+
+.jump-nav__scroller {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  margin-inline: calc(var(--gutter) * -1);
+  padding: 12px var(--gutter);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.jump-nav__scroller::-webkit-scrollbar { display: none; }
+
+.jump-nav__ink {
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 0;
+  width: 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  opacity: 0;
+  transition: transform 0.35s var(--ease), width 0.35s var(--ease), opacity 0.2s;
+}
+
+.jump-pill {
+  position: relative;
+  z-index: 1;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 18px;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-pill);
+  font-size: 16px;
+  font-weight: var(--weight-bold);
+  color: var(--color-navy);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+}
+.jump-pill[aria-current] {
+  border-color: transparent;
+  color: var(--color-on-primary);
+}
+
+@media (hover: hover) {
+  .jump-pill:not([aria-current]):hover { border-color: var(--color-primary); }
+}
+
+/* ---------- 3. Getting around ---------- */
+.way-cards {
+  display: grid;
+  gap: 12px;
+}
+
+.way-card {
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--color-white);
+}
+.way-card h3 { margin: 16px 0 8px; }
+
+.way-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--color-coral);
+  border-radius: 50%;
+  color: var(--color-coral);
+}
+
+.way-note {
+  margin: 24px 0 0;
+  font-weight: var(--weight-bold);
+  color: var(--color-navy);
+}
+
+@media (min-width: 768px) {
+  .way-cards { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .way-card { padding: 32px; }
+}
+
+/* ---------- 4. Places ---------- */
+.guide-places { background: var(--color-white); }
+
+.place-list {
+  display: grid;
+  gap: 56px;
+  padding-block: 64px 80px;
+}
+
+.place-media {
+  overflow: hidden;
+  border-radius: var(--radius);
+  aspect-ratio: 3 / 2;
+}
+
+.place-tile {
+  height: 100%;
+  background: var(--color-cream);
+  color: var(--color-navy);
+}
+.place-tile--navy {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.place-tile__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  height: 100%;
+  padding: 24px;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 3.4vw, 52px);
+  line-height: var(--line-heading);
+  text-transform: uppercase;
+  transition: transform 1.6s ease-out;
+}
+.place-tile__inner .icon {
+  width: clamp(48px, 6vw, 88px);
+  height: clamp(48px, 6vw, 88px);
+  color: var(--color-coral);
+  stroke-width: 1.25;
+}
+
+.good-for {
+  margin-bottom: 8px;
+  font-size: var(--text-small);
+  font-weight: var(--weight-bold);
+  color: var(--color-navy);
+}
+
+.room-row__body .btn--navy-outline { justify-self: start; }
+
+@media (hover: hover) and (min-width: 768px) {
+  .place-media:hover .place-tile__inner { transform: scale(1.05); }
+}
+
+@media (min-width: 1024px) {
+  .place-list { gap: 112px; padding-block: 96px 128px; }
+
+  .place-media { grid-column: 1 / span 7; }
+  .room-row:nth-child(even) .place-media { grid-column: 6 / span 7; grid-row: 1; }
+}
+
+/* ---------- 5. Perfect day timeline ---------- */
+.perfect-day h2 { margin-bottom: 36px; }
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 36px;
+  max-width: 720px;
+  margin: 0;
+  padding: 0 0 0 40px;
+  list-style: none;
+}
+
+.timeline__track {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 9px;
+  width: 2px;
+  background: var(--color-rule-light);
+}
+
+.timeline__line {
+  display: block;
+  height: 100%;
+  background: var(--color-coral);
+  transform-origin: top;
+}
+
+.timeline__item { position: relative; }
+.timeline__item h3 { margin-bottom: 6px; }
+.timeline__item p { margin: 0; }
+
+.timeline__dot {
+  position: absolute;
+  top: 6px;
+  left: -40px;
+  width: 20px;
+  height: 20px;
+  border: 4px solid var(--color-navy);
+  border-radius: 50%;
+  background: var(--color-coral);
+  box-shadow: 0 0 0 2px var(--color-coral);
+}
+
+.js .timeline__dot.scale-in {
+  transform: scale(0);
+  transition: opacity 0.4s ease-out, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.js .timeline__dot.scale-in.is-in { transform: none; }
+
+@media (min-width: 1024px) {
+  .perfect-day .container { display: grid; grid-template-columns: 5fr 7fr; gap: 32px; }
+  .timeline { gap: 56px; }
+}
+
+/* ---------- 6. Map ---------- */
+.map-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.map-wrap .map {
+  filter: grayscale(1);
+  transition: filter 0.4s;
+}
+
+.map-wrap:hover .map,
+.map-wrap .map:hover,
+.map-wrap:focus-within .map,
+.map-wrap.is-active .map { filter: none; }
+
+/* Touch devices have no hover: the first tap brings the color back. */
+.map-unlock {
+  display: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media (hover: none) {
+  .js .map-unlock { display: block; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .timeline__dot.scale-in { transform: none; opacity: 1; }
+  .place-tile__inner { transform: none !important; }
+}

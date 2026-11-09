@@ -3,27 +3,337 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Local Guide | Blind Pass Resort Motel</title>
-  <meta name="robots" content="noindex">
+  <title>Local Guide | Things to Do Near Blind Pass Resort, St Pete Beach</title>
+  <meta name="description" content="Beach days, island dinners and day trips near Blind Pass Resort in St. Pete Beach, from Corey Avenue and John's Pass to Fort De Soto Park.">
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/local-guide-hero-pool.webp" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rooms.css">
+  <link rel="stylesheet" href="assets/css/local-guide.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.blindpassresort.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Local Guide", "item": "https://www.blindpassresort.com/local-guide.html" }
+    ]
+  }
+  </script>
 </head>
-<body>
-  <!-- Placeholder page for the prototype. -->
-  <header class="placeholder-head">
-    <div class="container"><a href="index.html"><img src="assets/img/logo.png" alt="Blind Pass Resort, home" width="500" height="99"></a></div>
-  </header>
-  <main class="placeholder-page">
+<body class="page-guide">
+<!-- Icons: Lucide (ISC license) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-bus" viewBox="0 0 24 24"><path d="M8 6v6" /><path d="M15 6v6" /><path d="M2 12h19.6" /><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3" /><circle cx="7" cy="18" r="2" /><path d="M9 18h5" /><circle cx="16" cy="18" r="2" /></symbol>
+  <symbol id="i-circle-parking" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M9 17V7h4a3 3 0 0 1 0 6H9" /></symbol>
+  <symbol id="i-ferris-wheel" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2" /><path d="M12 2v4" /><path d="m6.8 15-3.5 2" /><path d="m20.7 7-3.5 2" /><path d="M6.8 9 3.3 7" /><path d="m20.7 17-3.5-2" /><path d="m9 22 3-8 3 8" /><path d="M8 22h8" /><path d="M18 18.7a9 9 0 1 0-12 0" /></symbol>
+  <symbol id="i-footprints" viewBox="0 0 24 24"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z" /><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z" /><path d="M16 17h4" /><path d="M4 13h4" /></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></symbol>
+  <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></symbol>
+  <symbol id="i-sailboat" viewBox="0 0 24 24"><path d="M22 18H2a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4Z" /><path d="M21 14 10 2 3 14h18Z" /><path d="M10 2v16" /></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></symbol>
+  <symbol id="i-sunset" viewBox="0 0 24 24"><path d="M12 10V2" /><path d="m4.93 10.93 1.41 1.41" /><path d="M2 18h2" /><path d="M20 18h2" /><path d="m19.07 10.93-1.41 1.41" /><path d="M22 22H2" /><path d="m16 6-4 4-4-4" /><path d="M16 18a4 4 0 0 0-8 0" /></symbol>
+  <symbol id="i-tree-palm" viewBox="0 0 24 24"><path d="M13 8c0-2.76-2.46-5-5.5-5S2 5.24 2 8h2l1-1 1 1h4" /><path d="M13 7.14A5.82 5.82 0 0 1 16.5 6c3.04 0 5.5 2.24 5.5 5h-3l-1-1-1 1h-3" /><path d="M5.89 9.71c-2.15 2.15-2.3 5.47-.35 7.43l4.24-4.25.7-.7.71-.71 2.12-2.12c-1.95-1.96-5.27-1.8-7.42.35" /><path d="M11 15.5c.5 2.5-.17 4.5-1 6.5h4c2-5.5-.5-12-1-14" /></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip To Content</a>
+
+<!-- ============ 1. HEADER ============ -->
+<header class="site-header" id="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__logo" href="index.html" aria-label="Blind Pass Resort, home">
+      <img src="assets/img/logo.png" alt="Blind Pass Resort, St Pete Beach" width="500" height="99">
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="rooms.html">Rooms</a>
+      <a href="local-guide.html" aria-current="page">Local Guide</a>
+      <!-- [CONFIRM] Gift Cards points at the existing store on the current site. Update after the WordPress move. -->
+      <a href="https://www.blindpassresort.com/giftcard">Gift Cards</a>
+      <a href="index.html#rewards">Rewards</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="btn btn--primary btn--no-arrow site-header__book" href="https://hotels.cloudbeds.com/en/reservation/TorgMC?currency=usd">Book Now</a>
+    <button class="menu-toggle" id="menu-open" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu: full-screen overlay, focus trapped, Esc closes (see main.js) -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="container mobile-menu__top">
+    <img src="assets/img/logo.png" alt="Blind Pass Resort, St Pete Beach" width="500" height="99" loading="lazy">
+    <button class="menu-toggle" id="menu-close" type="button" aria-label="Close menu">
+      <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+    </button>
+  </div>
+  <nav class="container mobile-menu__nav" aria-label="Mobile">
+    <a href="rooms.html">Rooms</a>
+    <a href="local-guide.html" aria-current="page">Local Guide</a>
+    <a href="https://www.blindpassresort.com/giftcard">Gift Cards</a>
+    <a href="index.html#rewards">Rewards</a>
+    <a href="index.html#contact">Contact</a>
+    <a class="btn btn--primary" href="https://hotels.cloudbeds.com/en/reservation/TorgMC?currency=usd">Book Now</a>
+  </nav>
+</div>
+
+<main id="main">
+
+  <!-- ============ 1. PAGE HERO ============ -->
+  <!-- [CONFIRM IMAGE] Hero is a still of the resort pool from the current site's hero video. No unused property photo exists in assets/img. -->
+  <section class="page-hero">
+    <img class="page-hero__img" src="assets/img/local-guide-hero-pool.webp" width="1600" height="900" fetchpriority="high" alt="Resort pool and courtyard with lounge chairs, a blue umbrella and palm trees.">
+    <div class="container page-hero__content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Local Guide</li>
+        </ol>
+      </nav>
+      <p class="hero__eyebrow">St. Pete Beach · Florida</p>
+      <h1><span class="mask"><span>Local Guide</span></span></h1>
+      <p class="page-hero__lead">Beach days, island dinners and day trips, all from our courtyard.</p>
+    </div>
+  </section>
+
+  <div class="guide-browse">
+    <div id="jump-sentinel"></div>
+
+    <!-- ============ 2. JUMP NAV ============ -->
+    <nav class="jump-nav" id="jump-nav" aria-label="On this page">
+      <div class="container">
+        <div class="jump-nav__scroller" id="jump-scroller">
+          <span class="jump-nav__ink" id="jump-ink" aria-hidden="true"></span>
+          <a class="jump-pill" href="#getting-around">Getting Around</a>
+          <a class="jump-pill" href="#beach">The Beach</a>
+          <a class="jump-pill" href="#corey-avenue">Corey Avenue</a>
+          <a class="jump-pill" href="#johns-pass">John's Pass</a>
+          <a class="jump-pill" href="#fort-de-soto">Fort De Soto</a>
+          <a class="jump-pill" href="#busch-gardens">Busch Gardens</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ============ 3. GETTING AROUND ============ -->
+    <section class="section section--lg guide-anchor" id="getting-around">
+      <div class="container">
+        <h2 class="section-title split">Getting Around</h2>
+        <div class="way-cards">
+          <article class="way-card reveal">
+            <span class="way-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-footprints"></use></svg></span>
+            <h3>Walk to the Gulf</h3>
+            <p>The beach is a short walk from the resort.</p>
+          </article>
+          <article class="way-card reveal">
+            <span class="way-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-bus"></use></svg></span>
+            <h3>Free island shuttle</h3>
+            <p>The free beach shuttle runs all around the barrier island.</p>
+          </article>
+          <article class="way-card reveal">
+            <span class="way-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-circle-parking"></use></svg></span>
+            <h3>Free parking</h3>
+            <p>Park once, then explore by shuttle or on foot.</p>
+          </article>
+        </div>
+        <p class="way-note reveal">Ask the front desk about our discount cards for local restaurants.</p>
+      </div>
+    </section>
+
+    <!-- ============ 4. PLACE SECTIONS ============ -->
+    <section class="guide-places" aria-label="Places to explore">
+      <div class="container container--wide place-list">
+
+        <article class="room-row" id="beach">
+          <div class="place-media clip">
+            <!-- [CONFIRM IMAGE] The Beach & Sunsets -->
+            <div class="place-tile" aria-hidden="true"><div class="place-tile__inner"><svg class="icon"><use href="#i-sunset"></use></svg><span>The Beach &amp; Sunsets</span></div></div>
+          </div>
+          <div class="room-row__body">
+            <p class="room-row__eyebrow reveal">Sun &amp; Sand</p>
+            <h2 class="split">The Beach &amp; Sunsets</h2>
+            <p class="room-row__desc reveal">The Gulf is a short walk from the resort, with sun and sand waiting at the end of it. St. Pete Beach and the Gulf Coast are known for their sunsets, so save time for the evening.</p>
+            <p class="good-for reveal">Good for</p>
+            <ul class="chips" data-stagger="40"><li class="chip scale-in">Families</li><li class="chip scale-in">Friends</li></ul>
+            <a class="btn btn--navy-outline reveal" href="https://www.google.com/maps/dir/?api=1&amp;origin=7901+Blind+Pass+Rd,+St+Pete+Beach,+FL+33706&amp;destination=St+Pete+Beach,+FL" target="_blank" rel="noopener" aria-label="Get Directions to St. Pete Beach, opens in a new tab">Get Directions</a>
+          </div>
+        </article>
+
+        <article class="room-row" id="corey-avenue">
+          <div class="place-media clip">
+            <!-- [CONFIRM IMAGE] Corey Avenue -->
+            <div class="place-tile place-tile--navy" aria-hidden="true"><div class="place-tile__inner"><svg class="icon"><use href="#i-store"></use></svg><span>Corey Avenue</span></div></div>
+          </div>
+          <div class="room-row__body">
+            <p class="room-row__eyebrow reveal">Shopping &amp; Dining</p>
+            <h2 class="split">Corey Avenue</h2>
+            <p class="room-row__desc reveal">Stroll Corey Avenue for charming shops, cafes and eclectic dining. Browse the shops, then stay for a meal.</p>
+            <p class="good-for reveal">Good for</p>
+            <ul class="chips" data-stagger="40"><li class="chip scale-in">Families</li><li class="chip scale-in">Friends</li></ul>
+            <a class="btn btn--navy-outline reveal" href="https://www.google.com/maps/dir/?api=1&amp;origin=7901+Blind+Pass+Rd,+St+Pete+Beach,+FL+33706&amp;destination=Corey+Avenue,+St+Pete+Beach,+FL" target="_blank" rel="noopener" aria-label="Get Directions to Corey Avenue, opens in a new tab">Get Directions</a>
+          </div>
+        </article>
+
+        <article class="room-row" id="johns-pass">
+          <div class="place-media clip">
+            <!-- [CONFIRM IMAGE] John's Pass Village & Boardwalk -->
+            <div class="place-tile" aria-hidden="true"><div class="place-tile__inner"><svg class="icon"><use href="#i-sailboat"></use></svg><span>John's Pass Village &amp; Boardwalk</span></div></div>
+          </div>
+          <div class="room-row__body">
+            <p class="room-row__eyebrow reveal">On the Water</p>
+            <h2 class="split">John's Pass Village &amp; Boardwalk</h2>
+            <p class="room-row__desc reveal">John's Pass Village &amp; Boardwalk mixes shops and restaurants with waterfront activities. Book a dolphin-watching tour or try water sports, then browse the boardwalk.</p>
+            <p class="good-for reveal">Good for</p>
+            <ul class="chips" data-stagger="40"><li class="chip scale-in">Families</li><li class="chip scale-in">Friends</li></ul>
+            <a class="btn btn--navy-outline reveal" href="https://www.google.com/maps/dir/?api=1&amp;origin=7901+Blind+Pass+Rd,+St+Pete+Beach,+FL+33706&amp;destination=John%27s+Pass+Village+%26+Boardwalk,+St+Pete+Beach,+FL" target="_blank" rel="noopener" aria-label="Get Directions to John's Pass Village and Boardwalk, opens in a new tab">Get Directions</a>
+          </div>
+        </article>
+
+        <article class="room-row" id="fort-de-soto">
+          <div class="place-media clip">
+            <!-- [CONFIRM IMAGE] Fort De Soto Park -->
+            <div class="place-tile place-tile--navy" aria-hidden="true"><div class="place-tile__inner"><svg class="icon"><use href="#i-tree-palm"></use></svg><span>Fort De Soto Park</span></div></div>
+          </div>
+          <div class="room-row__body">
+            <p class="room-row__eyebrow reveal">Nature &amp; History</p>
+            <h2 class="split">Fort De Soto Park</h2>
+            <p class="room-row__desc reveal">Fort De Soto Park has scenic trails, historic sites and unspoiled beaches. Plan on a full day out.</p>
+            <p class="good-for reveal">Good for</p>
+            <ul class="chips" data-stagger="40"><li class="chip scale-in">Families</li><li class="chip scale-in">Friends</li><li class="chip scale-in">Day trip</li></ul>
+            <a class="btn btn--navy-outline reveal" href="https://www.google.com/maps/dir/?api=1&amp;origin=7901+Blind+Pass+Rd,+St+Pete+Beach,+FL+33706&amp;destination=Fort+De+Soto+Park,+St+Pete+Beach,+FL" target="_blank" rel="noopener" aria-label="Get Directions to Fort De Soto Park, opens in a new tab">Get Directions</a>
+          </div>
+        </article>
+
+        <article class="room-row" id="busch-gardens">
+          <div class="place-media clip">
+            <!-- [CONFIRM IMAGE] Busch Gardens Tampa Bay -->
+            <div class="place-tile" aria-hidden="true"><div class="place-tile__inner"><svg class="icon"><use href="#i-ferris-wheel"></use></svg><span>Busch Gardens Tampa Bay</span></div></div>
+          </div>
+          <div class="room-row__body">
+            <p class="room-row__eyebrow reveal">Day Trip</p>
+            <h2 class="split">Busch Gardens Tampa Bay</h2>
+            <p class="room-row__desc reveal">Busch Gardens Tampa Bay is a drive away. Expect rides, wildlife encounters and live entertainment.</p>
+            <p class="good-for reveal">Good for</p>
+            <ul class="chips" data-stagger="40"><li class="chip scale-in">Families</li><li class="chip scale-in">Friends</li><li class="chip scale-in">Day trip</li></ul>
+            <a class="btn btn--navy-outline reveal" href="https://www.google.com/maps/dir/?api=1&amp;origin=7901+Blind+Pass+Rd,+St+Pete+Beach,+FL+33706&amp;destination=Busch+Gardens+Tampa+Bay,+Tampa,+FL" target="_blank" rel="noopener" aria-label="Get Directions to Busch Gardens Tampa Bay, opens in a new tab">Get Directions</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ 5. A PERFECT DAY ============ -->
+  <section class="section section--navy section--lg perfect-day">
     <div class="container">
-      <h1>Local Guide</h1>
-      <div class="placeholder-list">
-        <section id="corey-avenue"><h2>Corey Avenue</h2><p>Shops, cafes and dining.</p></section>
-        <section id="johns-pass"><h2>John's Pass Village &amp; Boardwalk</h2><p>Shops, restaurants, dolphin tours and water sports.</p></section>
-        <section id="fort-de-soto"><h2>Fort De Soto Park</h2><p>Trails, history and beaches.</p></section>
-        <section id="busch-gardens"><h2>Busch Gardens Tampa Bay</h2><p>A drive away when you want a day out.</p></section>
+      <h2 class="split">A Perfect Day</h2>
+      <ol class="timeline" id="timeline">
+        <li class="timeline__track" aria-hidden="true"><span class="timeline__line" id="timeline-line"></span></li>
+        <li class="timeline__item">
+          <span class="timeline__dot scale-in" aria-hidden="true"></span>
+          <div class="reveal"><h3>Morning</h3><p>Coffee in your room, then a walk to the Gulf.</p></div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__dot scale-in" aria-hidden="true"></span>
+          <div class="reveal"><h3>Midday</h3><p>The free shuttle to John's Pass for a dolphin tour.</p></div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__dot scale-in" aria-hidden="true"></span>
+          <div class="reveal"><h3>Afternoon</h3><p>Back for the heated pool and courtyard.</p></div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__dot scale-in" aria-hidden="true"></span>
+          <div class="reveal"><h3>Evening</h3><p>A sunset on the beach, then dinner on Corey Avenue.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 6. MAP ============ -->
+  <section class="section section--cream section--md">
+    <div class="container location">
+      <div class="map-wrap clip" id="map-wrap">
+        <iframe class="map" title="Map showing Blind Pass Resort Motel at 7901 Blind Pass Rd, St Pete Beach, FL 33706" src="https://www.google.com/maps?q=7901+Blind+Pass+Rd,+St+Pete+Beach,+FL+33706&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <button class="map-unlock" id="map-unlock" type="button" aria-label="Show map in color"></button>
+      </div>
+      <div>
+        <h2 class="split">Find Us</h2>
+        <ul class="contact-list reveal">
+          <li><span class="contact-list__row"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg><span>7901 Blind Pass Rd<br>St Pete Beach, FL 33706</span></span></li>
+          <li><a class="contact-list__row" href="tel:+17276055352"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg><span>Call or text <u>(727) 605-5352</u></span></a></li>
+          <li><a class="contact-list__row" href="mailto:reservations@coastalgetaway.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg><u>reservations@coastalgetaway.com</u></a></li>
+        </ul>
+        <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=7901+Blind+Pass+Rd%2C+St+Pete+Beach%2C+FL+33706" target="_blank" rel="noopener" aria-label="Get Directions to Blind Pass, opens in a new tab">Get Directions to Blind Pass</a>
       </div>
     </div>
-  </main>
+  </section>
+
+  <!-- ============ 7. CLOSING CTA ============ -->
+  <!-- [CONFIRM IMAGE] Closing band is a still of the boardwalk from the current site's hero video. No unused property photo exists in assets/img. -->
+  <section class="closing-cta">
+    <img class="closing-cta__img" src="assets/img/local-guide-closing-boardwalk.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Waterfront boardwalk with shops and boats on a bright day.">
+    <div class="container closing-cta__content">
+      <h2 class="split">Stay close to all of it.</h2>
+      <a class="btn btn--primary" href="https://hotels.cloudbeds.com/en/reservation/TorgMC?currency=usd">Book Now</a>
+      <a class="closing-cta__link" href="index.html#rewards">Members save 10% or more — join Coastal Rewards</a>
+    </div>
+  </section>
+</main>
+
+<!-- ============ 10. FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <a class="site-footer__logo" href="index.html" aria-label="Blind Pass Resort, back to top">
+        <img src="assets/img/logo.png" alt="Blind Pass Resort, St Pete Beach" width="500" height="99" loading="lazy">
+      </a>
+      <address>
+        7901 Blind Pass Rd, St Pete Beach, FL 33706<br>
+        Call or text <a href="tel:+17276055352">(727) 605-5352</a><br>
+        <a href="mailto:reservations@coastalgetaway.com">reservations@coastalgetaway.com</a>
+      </address>
+    </div>
+    <nav aria-label="Quick links">
+      <h2 class="site-footer__title">Quick Links</h2>
+      <ul class="plain-list">
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="local-guide.html">Local Guide</a></li>
+        <li><a href="https://www.blindpassresort.com/giftcard">Gift Cards</a></li>
+        <li><a href="index.html#rewards">Rewards</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p class="site-footer__part">Part of Coastal Getaway</p>
+      <h2 class="site-footer__title">Coastal Collection</h2>
+      <ul class="plain-list collection">
+        <li><a href="https://www.bluebirddaytahoe.com/">Bluebird Day Inn (Lake Tahoe, CA)</a></li>
+        <li><a href="https://www.genevahoteltiki.com/">Geneva Hotel &amp; Tiki (Lake Lure, NC)</a></li>
+        <li><a href="https://www.hickoryfallsinn.com/">Hickory Falls Inn (Lake Lure, NC)</a></li>
+        <li><a href="https://www.themaliburesortmotel.com/">Malibu Resort Motel (N. Redington Beach, FL)</a></li>
+        <li><a href="https://www.islandhousebeachhotel.com/">Island House Resort (N. Redington Beach, FL)</a></li>
+        <li><a href="https://www.seashellsbeachclub.com/">Sea Shells Beach Club (Daytona Beach, FL)</a></li>
+        <li><a href="https://www.coastalsuites.com/">Coastal Suites (Wilmington, NC)</a></li>
+        <li><a href="https://www.thepatriotsmotel.com/">Patriots Boutique Motel (San Clemente, CA)</a></li>
+        <li><a href="https://www.thepineola.com/">The Pineola (Blue Ridge Mtns, NC)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer__wordmark" aria-hidden="true">BLIND PASS</div>
+</footer>
+
+<!-- ============ 11. MOBILE BOOK BAR ============ -->
+<div class="book-bar" id="book-bar">
+  <a class="btn btn--primary btn--full" href="https://hotels.cloudbeds.com/en/reservation/TorgMC?currency=usd">Book Now</a>
+</div>
+
+<script src="assets/js/local-guide.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>

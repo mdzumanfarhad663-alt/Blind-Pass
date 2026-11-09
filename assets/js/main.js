@@ -100,7 +100,7 @@
     });
   }
 
-  var GRIDS = '.bento, .tiers, .pills, .chips';
+  var GRIDS = '.bento, .tiers, .pills, .chips, .way-cards';
 
   function finish(el) {
     if (el.dataset.text) {
@@ -293,7 +293,8 @@
         var target = $(link.getAttribute('href').replace('/', ''));
         if (!target) return;
         e.preventDefault();
-        lenis.scrollTo(target === hero ? 0 : target);
+        var margin = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+        lenis.scrollTo(target === hero ? 0 : target, { offset: -margin });
       });
     };
     document.head.appendChild(script);
