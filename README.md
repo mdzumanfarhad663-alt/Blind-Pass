@@ -10,6 +10,7 @@ Brand fonts and colors are documented in `BRAND.md`. All design tokens are CSS v
 - `rooms.html`: Rooms page, rendered from the single room list in `assets/js/rooms.js`
 - `local-guide.html`: Local Guide page, with styles in `assets/css/local-guide.css` and behavior in `assets/js/local-guide.js`
 - `gift-cards.html`: Gift Cards page, with styles in `assets/css/gift-cards.css` and behavior in `assets/js/gift-cards.js`
+- `contact.html`: Contact page, with styles in `assets/css/contact.css` and behavior in `assets/js/contact.js`
 - `assets/css/style.css`, `assets/css/rooms.css`, `assets/js/main.js`, `assets/js/rooms-page.js`, `assets/img/`, `assets/video/`
 - `BRAND.md`: extracted brand values
 - `render.yaml`: Render static site definition
@@ -38,16 +39,18 @@ If this folder sits inside a larger repository, set `rootDir: blindpass` on the 
 2. **Final gift card purchase URL.** "Buy a Gift Card" points at the current Squarespace shop (`https://www.blindpassresort.com/giftcard/p/gift-cards-coastal-getaway-vacations`), which will be retired. Marked in `gift-cards.html`.
 3. **[CONFIRM IMAGE] Explore tile images.** Each tile is a neutral colored block until licensed photos exist. Marked per tile in `index.html`. To add a photo, replace the `.tile__img` span with `<img class="tile__img" src="..." alt="..." loading="lazy">`.
 4. **[CONFIRM PHOTOS] Queen Studio Suite.** Cloudbeds only has low-resolution `microsoftteams-image` photos for this room. Marked in `rooms.html` and `assets/js/rooms.js`.
-5. **Exact pet fee and limits.** The Rooms page says only that fees apply and are discounted the longer guests stay. Marked in `rooms.html`.
+5. **Exact pet fee and limits.** The Rooms and Contact pages say only that fees apply and are discounted the longer guests stay. Marked in `rooms.html` and `contact.html`.
 6. **[CONFIRM IMAGE] Local Guide images.** The five place rows use styled tiles until licensed photos exist. The hero and closing band are stills from the current site's hero video, because no unused property photo exists in `assets/img`. Marked in `local-guide.html`.
 7. **Gift card redemption.** Are cards redeemable at all Coastal Collection properties, or at Blind Pass only? The page answers "Contact our team to confirm." Marked in `gift-cards.html`.
 8. **Gift cards and room types.** Can a gift card be used for any room? The page answers "Contact our team to confirm." Marked in `gift-cards.html`.
 9. **Gift card delivery method.** Email or physical card. The How It Works copy makes no delivery promise. Marked in `gift-cards.html`.
 10. **[CONFIRM PHOTOS] Gift Cards hero and closing band.** The sources are 700 px and 799 px photos from the current booking engine, enlarged for this page. Ask for the original files. Marked in `gift-cards.html`.
+11. **[CONFIRM PHOTOS] Contact hero.** The source is a 700 px aerial photo from the current booking engine, enlarged for this page. Ask for the original file. Marked in `contact.html`.
 
 ## Other Notes For The WordPress Build
 
 - **Gift Cards page** has no payment form and no Product or Offer schema. Add schema after the purchase setup is confirmed.
+- **Contact forms** are front-end only and send data nowhere. In Elementor Forms, send to reservations@coastalgetaway.com with Reply-To set to the email field. Field IDs: `full_name`, `email`, `phone`, `message` for Send a Message, and `full_name`, `email`, `phone`, `arrival_date`, `departure_date`, `rooms`, `guests`, `pets`, `details` for Group Booking. Use the Elementor Honeypot field in place of the `website` field.
 - **Rewards form** is front-end only. It validates and shows an inline success message, but it sends data nowhere.
 - **Hero video** comes from the current site. It is a montage with a burned-in "St. Pete Pier" title. `hero.mp4` is 1280 px wide at CRF 30 (5.8 MB). `hero-mobile.mp4` is 720 px wide (3.0 MB). Host it on a server with HTTP Range support.
 - **Lenis** smooth scrolling loads from jsDelivr on desktop pointer devices only. All other motion is in `assets/js/main.js` and `assets/css/style.css`.

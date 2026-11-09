@@ -360,25 +360,6 @@ html:not(.js) #filter-pets { display: none; }
 }
 .pet-note p { margin: 0; color: var(--color-navy); font-weight: var(--weight-bold); }
 
-.btn--navy-outline {
-  justify-self: start;
-  border-color: var(--color-navy);
-  color: var(--color-navy);
-}
-
-@media (hover: hover) {
-  .btn--navy-outline:hover {
-    background: var(--color-primary);
-    border-color: var(--color-primary);
-    color: var(--color-on-primary);
-  }
-}
-
-.btn--navy-outline:focus-visible {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
-  color: var(--color-on-primary);
-}
 
 @media (min-width: 768px) {
   .pet-note {
