@@ -10,7 +10,7 @@
 
   /* ---------- Mobile book bar ---------- */
   var bookBar = $('#book-bar');
-  var hero = $('.hero');
+  var hero = $('.hero, .page-hero');
 
   function onScroll() {
     bookBar.classList.toggle('is-visible', window.scrollY > hero.offsetHeight * 0.7);
@@ -100,7 +100,7 @@
     });
   }
 
-  var GRIDS = '.bento, .tiers, .pills';
+  var GRIDS = '.bento, .tiers, .pills, .chips';
 
   function finish(el) {
     if (el.dataset.text) {
@@ -133,14 +133,16 @@
     $$('.split').forEach(splitLines);
 
     var observer = new IntersectionObserver(function (entries) {
-      var batch = 0;
+      var batches = new Map();
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         var el = entry.target;
+        var parent = el.parentElement;
         var delay = 0;
-        if (el.parentElement.matches(GRIDS)) {
-          delay = batch * 80;
-          batch += 1;
+        if (parent.matches(GRIDS)) {
+          var batch = batches.get(parent) || 0;
+          delay = batch * (+parent.dataset.stagger || 80);
+          batches.set(parent, batch + 1);
         }
         el.style.transitionDelay = delay + 'ms';
         el.classList.add('is-in');
@@ -191,6 +193,8 @@
   var next = $('#rooms-next');
   var bar = $('#rooms-progress');
   var scrollMode = reduced ? 'auto' : 'smooth';
+
+  if (track) (function () {
 
   function stepSize() {
     var cards = $$('.room', track);
@@ -255,6 +259,8 @@
   track.addEventListener('click', function (e) {
     if (dragged) { e.preventDefault(); e.stopPropagation(); dragged = false; }
   }, true);
+
+  })();
 
   /* ---------- Magnetic buttons (desktop only, 6px max) ---------- */
   if (desktop && !reduced) {
@@ -328,7 +334,7 @@
   var form = $('#rewards-form');
   var success = $('#rewards-success');
 
-  form.addEventListener('submit', function (e) {
+  if (form) form.addEventListener('submit', function (e) {
     e.preventDefault();
     form.reset();
     success.hidden = false;

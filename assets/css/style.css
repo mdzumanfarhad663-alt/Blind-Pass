@@ -828,6 +828,13 @@ html:not(.js) .carousel { scrollbar-width: thin; padding-bottom: 12px; }
   gap: 8px;
 }
 
+.room__details {
+  display: inline-block;
+  margin-top: 10px;
+  padding-block: 4px;
+  color: var(--color-white);
+}
+
 .carousel-progress {
   display: none;
   height: 2px;

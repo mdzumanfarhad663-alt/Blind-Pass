@@ -7,8 +7,9 @@ Brand fonts and colors are documented in `BRAND.md`. All design tokens are CSS v
 ## Files
 
 - `index.html`: Home page
-- `rooms.html`, `local-guide.html`: placeholder pages for the "See All Rooms" link and the Explore tiles
-- `assets/css/style.css`, `assets/js/main.js`, `assets/img/`, `assets/video/`
+- `rooms.html`: Rooms page, rendered from the single room list in `assets/js/rooms.js`
+- `local-guide.html`: placeholder page for the Explore tiles
+- `assets/css/style.css`, `assets/css/rooms.css`, `assets/js/main.js`, `assets/js/rooms-page.js`, `assets/img/`, `assets/video/`
 - `BRAND.md`: extracted brand values
 - `render.yaml`: Render static site definition
 
@@ -32,9 +33,11 @@ If this folder sits inside a larger repository, set `rootDir: blindpass` on the 
 
 ## [CONFIRM] Items
 
-1. **Queen Studio Suite pet policy (rid 664456).** The brief leaves this open, so no pet information is shown. Marked in `rooms.html`, and noted in the Rooms section of `index.html`. The room is not one of the six Home page cards.
+1. **Queen Studio Suite pet policy (rid 664456).** No pet chip is shown, and the room is excluded from the Pet Friendly filter until confirmed. Marked in `rooms.html`, `assets/js/rooms.js` and the Rooms section of `index.html`.
 2. **Gift Cards link.** It points at the store on the current site (`https://www.blindpassresort.com/giftcard`). Update it after the WordPress move. Marked in `index.html`.
 3. **[CONFIRM IMAGE] Explore tile images.** Each tile is a neutral colored block until licensed photos exist. Marked per tile in `index.html`. To add a photo, replace the `.tile__img` span with `<img class="tile__img" src="..." alt="..." loading="lazy">`.
+4. **[CONFIRM PHOTOS] Queen Studio Suite.** Cloudbeds only has low-resolution `microsoftteams-image` photos for this room. Marked in `rooms.html` and `assets/js/rooms.js`.
+5. **Exact pet fee and limits.** The Rooms page says only that fees apply and are discounted the longer guests stay. Marked in `rooms.html`.
 
 ## Other Notes For The WordPress Build
 
@@ -44,4 +47,5 @@ If this folder sits inside a larger repository, set `rootDir: blindpass` on the 
 - **Logo** source is 500 px wide. Ask the client for a vector or larger file before using it wider than about 250 px.
 - **Cloudbeds property description** contains a TripAdvisor claim. It is not used here, but it still appears on the booking page.
 - **Room links** use `#rid=<rid>`. Cloudbeds defaults to the next night and moves the requested room to the top of the list. A room that is sold out on those dates stays in the Sold Out group at the bottom.
+- **Room data** lives in one array in `assets/js/rooms.js`. The JSON-LD and no-JavaScript list in `rooms.html` were generated from it, so update them if a room changes.
 - **Icons** are from Lucide (ISC license), inlined as an SVG sprite at the top of `index.html`.
