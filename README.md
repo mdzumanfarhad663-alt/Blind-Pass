@@ -37,10 +37,10 @@ If this folder sits inside a larger repository, set `rootDir: blindpass` on the 
 
 1. **Queen Studio Suite pet policy (rid 664456).** No pet chip is shown, and the room is excluded from the Pet Friendly filter until confirmed. Marked in `rooms.html`, `assets/js/rooms.js` and the Rooms section of `index.html`.
 2. **Final gift card purchase URL.** "Buy a Gift Card" points at the current Squarespace shop (`https://www.blindpassresort.com/giftcard/p/gift-cards-coastal-getaway-vacations`), which will be retired. Marked in `gift-cards.html`.
-3. **[CONFIRM IMAGE] Explore tile images.** Tiles use property photos and hero-video stills until photos of each place are supplied. Only the John's Pass tile shows the actual place. Marked per tile in `index.html`.
+3. **[CONFIRM IMAGE] Explore tile images.** Three tiles use property photos and a hero-video still until photos of each place are supplied. Marked per tile in `index.html`. The John's Pass tile is not included, because its image is a frame from the property's own video.
 4. **[CONFIRM PHOTOS] Queen Studio Suite.** Cloudbeds only has low-resolution `microsoftteams-image` photos for this room. Marked in `rooms.html` and `assets/js/rooms.js`.
 5. **Exact pet fee and limits.** The Rooms and Contact pages say only that fees apply and are discounted the longer guests stay. Marked in `rooms.html` and `contact.html`.
-6. **[CONFIRM IMAGE] Local Guide images.** The hero uses the courtyard fountain photo from Home. The five place rows use property photos and hero-video stills until Jed sends real photos. Only the John's Pass row shows the actual place. The closing band is a hero-video still. Marked in `local-guide.html`.
+6. **[CONFIRM IMAGE] Local Guide images.** The hero uses the courtyard fountain photo from Home. Four place rows use property photos and hero-video stills until Jed sends real photos. The John's Pass row is not included, because its image is a frame from the property's own video. The closing band is a hero-video still. Marked in `local-guide.html`.
 7. **Gift card redemption.** Are cards redeemable at all Coastal Collection properties, or at Blind Pass only? The page answers "Contact our team to confirm." Marked in `gift-cards.html`.
 8. **Gift cards and room types.** Can a gift card be used for any room? The page answers "Contact our team to confirm." Marked in `gift-cards.html`.
 9. **Gift card delivery method.** Email or physical card. The How It Works copy makes no delivery promise. Marked in `gift-cards.html`.

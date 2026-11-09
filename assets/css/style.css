@@ -1307,6 +1307,8 @@ html:not(.js) .carousel { scrollbar-width: thin; padding-bottom: 12px; }
 }
 .collection li { break-inside: avoid; }
 
+.site-footer__hours { margin: 6px 0 0; }
+
 .site-footer__part {
   margin-bottom: 12px;
   font-weight: var(--weight-bold);

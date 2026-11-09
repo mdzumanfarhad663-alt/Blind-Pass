@@ -469,7 +469,7 @@ html:not(.js) .tabpanel + .tabpanel { margin-top: 48px; }
 .map-card {
   padding-block: 28px;
 }
-.map-card h2 { margin-bottom: 12px; }
+.map-card h2 { margin-bottom: 20px; }
 .map-card address { margin-bottom: 20px; font-style: normal; }
 
 @media (min-width: 1024px) {
