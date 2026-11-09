@@ -8,15 +8,12 @@
   var desktop = matchMedia('(hover: hover) and (pointer: fine) and (min-width: 1024px)').matches;
   var EASE_MS = 950;
 
-  /* ---------- Header and mobile book bar ---------- */
-  var header = $('#site-header');
+  /* ---------- Mobile book bar ---------- */
   var bookBar = $('#book-bar');
   var hero = $('.hero');
 
   function onScroll() {
-    var y = window.scrollY;
-    header.classList.toggle('is-solid', y > 80);
-    bookBar.classList.toggle('is-visible', y > hero.offsetHeight * 0.7);
+    bookBar.classList.toggle('is-visible', window.scrollY > hero.offsetHeight * 0.7);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -290,7 +287,7 @@
         var target = $(link.getAttribute('href').replace('/', ''));
         if (!target) return;
         e.preventDefault();
-        lenis.scrollTo(target === hero ? 0 : target, { offset: target === hero ? 0 : -header.offsetHeight });
+        lenis.scrollTo(target === hero ? 0 : target);
       });
     };
     document.head.appendChild(script);
