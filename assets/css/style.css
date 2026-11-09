@@ -1313,6 +1313,15 @@ html:not(.js) .carousel { scrollbar-width: thin; padding-bottom: 12px; }
 }
 .is-in .ln__in { transform: none; }
 
+/* ---------- Current page in the header menu ---------- */
+.site-nav a[aria-current="page"]::after { transform: scaleX(1); }
+.mobile-menu__nav a[aria-current="page"]:not(.btn) {
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}
+
 /* ---------- Hover (pointer devices only) ---------- */
 @media (hover: hover) {
   .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-soft); }

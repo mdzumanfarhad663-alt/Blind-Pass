@@ -100,7 +100,7 @@
     });
   }
 
-  var GRIDS = '.bento, .tiers, .pills, .chips, .way-cards';
+  var GRIDS = '.bento, .tiers, .pills, .chips, .way-cards, .steps, .occasions';
 
   function finish(el) {
     if (el.dataset.text) {
