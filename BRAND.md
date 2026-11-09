@@ -36,6 +36,8 @@ Line heights on the current site: body 1.6. The heading theme value is 1.75, whi
 | Black | `#000000` | `0, 0%, 0%` | Body text and nav links on light sections, hero section background |
 | Rewards teal | `#00A5A5` | `rgb(0,165,165)` | Coastal Rewards nav link only (`custom.css`) |
 | Input background | `#FAFAFA` | `rgb(250,250,250)` | Form fields |
+| Body text (prototype) | `#2A2C55` | Client specified | Not on the current site |
+| Rewards metals (prototype) | `#B87333`, `#C0C0C0`, `#D4AF37` | Client specified | Tier card borders only |
 
 ### Primary color
 
@@ -70,7 +72,7 @@ Line heights on the current site: body 1.6. The heading theme value is 1.75, whi
 ## Proposed Usage
 
 - **Headings:** navy on white and cream, white or coral on navy. This changes the coral-on-white headings on the current site, which fail contrast. Coral text links on white stay underlined because coral alone fails contrast (2.36:1).
-- **Body text:** black on light sections, white on navy.
+- **Body text:** `#2A2C55` on light sections, white on navy. 17px desktop, 16px mobile, line height 1.65.
 - **Section backgrounds:** alternate white, cream and navy.
 - **Rewards teal:** not used.
 

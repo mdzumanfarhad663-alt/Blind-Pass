@@ -34,12 +34,13 @@ If this folder sits inside a larger repository, set `rootDir: blindpass` on the 
 
 1. **Queen Studio Suite pet policy (rid 664456).** The brief leaves this open, so no pet information is shown. Marked in `rooms.html`, and noted in the Rooms section of `index.html`. The room is not one of the six Home page cards.
 2. **Gift Cards link.** It points at the store on the current site (`https://www.blindpassresort.com/giftcard`). Update it after the WordPress move. Marked in `index.html`.
-3. **Explore tile photos.** They come from the current site and appear to be third-party images, so usage rights need checking. No source confirms where the Corey Avenue photo was taken. Marked in `index.html`.
+3. **[CONFIRM IMAGE] Explore tile images.** Each tile is a neutral colored block until licensed photos exist. Marked per tile in `index.html`. To add a photo, replace the `.tile__img` span with `<img class="tile__img" src="..." alt="..." loading="lazy">`.
 
 ## Other Notes For The WordPress Build
 
 - **Rewards form** is front-end only. It validates and shows an inline success message, but it sends data nowhere.
-- **Hero video** comes from the current site. It is a montage with a burned-in "St. Pete Pier" title. `hero.mp4` is 1280 px wide because CRF 28 at 1920 px is 14.7 MB.
+- **Hero video** comes from the current site. It is a montage with a burned-in "St. Pete Pier" title. `hero.mp4` is 1280 px wide at CRF 30 (5.8 MB). `hero-mobile.mp4` is 720 px wide (3.0 MB). Host it on a server with HTTP Range support.
+- **Lenis** smooth scrolling loads from jsDelivr on desktop pointer devices only. All other motion is in `assets/js/main.js` and `assets/css/style.css`.
 - **Logo** source is 500 px wide. Ask the client for a vector or larger file before using it wider than about 250 px.
 - **Cloudbeds property description** contains a TripAdvisor claim. It is not used here, but it still appears on the booking page.
 - **Room links** use `#rid=<rid>`. Cloudbeds defaults to the next night and moves the requested room to the top of the list. A room that is sold out on those dates stays in the Sold Out group at the bottom.
