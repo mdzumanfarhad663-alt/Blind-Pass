@@ -55,7 +55,12 @@
   animation: fade-up 0.6s ease-out both;
 }
 .breadcrumb li + li::before { content: "/"; margin-right: 8px; }
-.breadcrumb a { color: var(--color-white); }
+.breadcrumb a {
+  display: inline-block;
+  margin-block: -12px; /* 44px tap height without moving the hero text */
+  padding-block: 12px;
+  color: var(--color-white);
+}
 
 .page-hero h1 {
   font-size: clamp(32px, 5.5vw, 80px);
@@ -208,6 +213,32 @@ html:not(.js) #filter-pets { display: none; }
 
 .room-row__desc { margin-bottom: 22px; }
 
+.read-more {
+  display: block;
+  min-height: 44px;
+  margin: -18px 0 10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: var(--weight-bold);
+  color: var(--color-navy);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.read-more[hidden] { display: none; }
+
+@media (max-width: 767px) {
+  .room-row__desc.is-clamped {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+}
+
 .room-row__actions {
   display: flex;
   flex-wrap: wrap;
@@ -216,13 +247,14 @@ html:not(.js) #filter-pets { display: none; }
 }
 
 .text-link {
+  display: inline-block;
   padding-block: 12px;
   font-weight: var(--weight-bold);
   color: var(--color-navy);
 }
 
 @media (min-width: 1024px) {
-  .room-list { gap: 112px; padding-block: 64px 128px; }
+  .room-list { gap: 78px; padding-block: 45px 90px; }
 
   .room-row {
     grid-template-columns: repeat(12, 1fr);
@@ -230,6 +262,7 @@ html:not(.js) #filter-pets { display: none; }
     align-items: center;
   }
   .gallery { grid-column: 1 / span 7; }
+  .gallery__track { width: 100%; max-height: 460px; }
   .room-row__body { grid-column: 9 / span 4; }
 
   .room-row:nth-child(even) .gallery { grid-column: 6 / span 7; grid-row: 1; }
@@ -266,15 +299,15 @@ html:not(.js) #filter-pets { display: none; }
   display: flex;
   justify-content: center;
   gap: 2px;
-  margin-top: 6px;
+  margin-top: 0;
 }
 
 .gallery__dot {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 44px;
   padding: 0;
   border: 0;
   border-radius: 50%;
@@ -321,8 +354,11 @@ html:not(.js) #filter-pets { display: none; }
   }
 
   .gallery__thumb {
+    flex: none;
     width: 96px;
     height: 64px;
+    min-width: 56px;
+    min-height: 44px;
     padding: 0;
     overflow: hidden;
     border: 0;
@@ -399,6 +435,7 @@ html:not(.js) #filter-pets { display: none; }
 }
 .faq__item[open] summary::after { transform: rotate(45deg); }
 .faq__item p { padding-bottom: 18px; }
+.faq__item p a { display: inline-block; padding-block: 10px; }
 
 @media (min-width: 1024px) {
   .faq { margin-top: 88px; display: grid; grid-template-columns: 4fr 8fr; gap: 32px; }

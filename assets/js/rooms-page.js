@@ -52,7 +52,8 @@
       '<h2 class="split">' + r.name + '</h2>' +
       '<ul class="room-row__meta reveal">' + meta + '</ul>' +
       '<ul class="chips" data-stagger="40">' + chips(r) + '</ul>' +
-      '<p class="room-row__desc reveal">' + r.description + '</p>' +
+      '<p class="room-row__desc reveal" id="desc-' + r.slug + '">' + r.description + '</p>' +
+      '<button class="read-more" type="button" aria-expanded="false" aria-controls="desc-' + r.slug + '" hidden>Read more</button>' +
       '<div class="room-row__actions reveal">' +
       '<a class="btn btn--primary" href="' + BASE + '#rid=' + r.rid + '" target="_blank" rel="noopener" aria-label="Book ' + r.name + ', opens in a new tab">Book This Room</a>' +
       '<a class="text-link" href="tel:+17276055352">Call or Text (727) 605-5352</a>' +
@@ -103,6 +104,32 @@
       track.scrollLeft = stripMode.matches ? index * track.clientWidth : 0;
     });
   });
+
+  /* ---------- Phones: descriptions collapse to 3 lines with a Read more toggle ---------- */
+  var descriptions = Array.prototype.slice.call(document.querySelectorAll('.room-row__desc'));
+
+  function measureDescriptions() {
+    descriptions.forEach(function (desc) {
+      var button = desc.nextElementSibling;
+      if (desc.offsetParent === null || button.getAttribute('aria-expanded') === 'true') return;
+      desc.classList.add('is-clamped');
+      button.hidden = !stripMode.matches || desc.scrollHeight <= desc.clientHeight + 1;
+    });
+  }
+
+  descriptions.forEach(function (desc) {
+    var button = desc.nextElementSibling;
+    button.addEventListener('click', function () {
+      var open = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(open));
+      button.textContent = open ? 'Read less' : 'Read more';
+      desc.classList.toggle('is-clamped', !open);
+    });
+  });
+
+  measureDescriptions();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(measureDescriptions);
+  window.addEventListener('resize', measureDescriptions);
 
   /* ---------- Filter with FLIP layout animation ---------- */
   var RULES = {

@@ -37,10 +37,10 @@ If this folder sits inside a larger repository, set `rootDir: blindpass` on the 
 
 1. **Queen Studio Suite pet policy (rid 664456).** No pet chip is shown, and the room is excluded from the Pet Friendly filter until confirmed. Marked in `rooms.html`, `assets/js/rooms.js` and the Rooms section of `index.html`.
 2. **Final gift card purchase URL.** "Buy a Gift Card" points at the current Squarespace shop (`https://www.blindpassresort.com/giftcard/p/gift-cards-coastal-getaway-vacations`), which will be retired. Marked in `gift-cards.html`.
-3. **[CONFIRM IMAGE] Explore tile images.** Each tile is a neutral colored block until licensed photos exist. Marked per tile in `index.html`. To add a photo, replace the `.tile__img` span with `<img class="tile__img" src="..." alt="..." loading="lazy">`.
+3. **[CONFIRM IMAGE] Explore tile images.** Tiles use property photos and hero-video stills until photos of each place are supplied. Only the John's Pass tile shows the actual place. Marked per tile in `index.html`.
 4. **[CONFIRM PHOTOS] Queen Studio Suite.** Cloudbeds only has low-resolution `microsoftteams-image` photos for this room. Marked in `rooms.html` and `assets/js/rooms.js`.
 5. **Exact pet fee and limits.** The Rooms and Contact pages say only that fees apply and are discounted the longer guests stay. Marked in `rooms.html` and `contact.html`.
-6. **[CONFIRM IMAGE] Local Guide images.** The five place rows use styled tiles until licensed photos exist. The hero and closing band are stills from the current site's hero video, because no unused property photo exists in `assets/img`. Marked in `local-guide.html`.
+6. **[CONFIRM IMAGE] Local Guide images.** The hero uses the courtyard fountain photo from Home. The five place rows use property photos and hero-video stills until Jed sends real photos. Only the John's Pass row shows the actual place. The closing band is a hero-video still. Marked in `local-guide.html`.
 7. **Gift card redemption.** Are cards redeemable at all Coastal Collection properties, or at Blind Pass only? The page answers "Contact our team to confirm." Marked in `gift-cards.html`.
 8. **Gift cards and room types.** Can a gift card be used for any room? The page answers "Contact our team to confirm." Marked in `gift-cards.html`.
 9. **Gift card delivery method.** Email or physical card. The How It Works copy makes no delivery promise. Marked in `gift-cards.html`.
@@ -52,7 +52,7 @@ If this folder sits inside a larger repository, set `rootDir: blindpass` on the 
 - **Gift Cards page** has no payment form and no Product or Offer schema. Add schema after the purchase setup is confirmed.
 - **Contact forms** are front-end only and send data nowhere. In Elementor Forms, send to reservations@coastalgetaway.com with Reply-To set to the email field. Field IDs: `full_name`, `email`, `phone`, `message` for Send a Message, and `full_name`, `email`, `phone`, `arrival_date`, `departure_date`, `rooms`, `guests`, `pets`, `details` for Group Booking. Use the Elementor Honeypot field in place of the `website` field.
 - **Rewards form** is front-end only. It validates and shows an inline success message, but it sends data nowhere.
-- **Hero video** comes from the current site. It is a montage with a burned-in "St. Pete Pier" title. `hero.mp4` is 1280 px wide at CRF 30 (5.8 MB). `hero-mobile.mp4` is 720 px wide (3.0 MB). Host it on a server with HTTP Range support.
+- **Hero video** is a 13.8-second loop cut only from the title-free clips of the current site's montage: resort pool, a room, John's Pass, and a boat at the St. Pete Pier. `hero.mp4` is 1920 px wide at CRF 28 and `hero-mobile.mp4` is 720 px wide. The sunset pier clip is left out because the source video labels that area Pier 60, which may not be St. Pete Beach. Host it on a server with HTTP Range support.
 - **Lenis** smooth scrolling loads from jsDelivr on desktop pointer devices only. All other motion is in `assets/js/main.js` and `assets/css/style.css`.
 - **Logo** source is 500 px wide. Ask the client for a vector or larger file before using it wider than about 250 px.
 - **Cloudbeds property description** contains a TripAdvisor claim. It is not used here, but it still appears on the booking page.

@@ -66,12 +66,14 @@
 }
 
 .contact-card__main {
+  display: inline-block;
+  padding-block: 10px;
   font-size: 18px;
   font-weight: var(--weight-bold);
   line-height: 1.35;
   color: var(--color-navy);
 }
-.contact-card__main--small { margin-top: 12px; font-size: 16px; }
+.contact-card__main--small { margin-top: 2px; padding-block: 12px; font-size: 16px; }
 
 /* The main link covers the card, so the whole card is one large tap target. */
 .contact-card__main::after {
@@ -88,6 +90,7 @@
 }
 
 .contact-card__sub {
+  display: inline-block;
   padding-block: 10px;
   font-weight: var(--weight-bold);
   color: var(--color-navy);
