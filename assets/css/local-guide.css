@@ -202,45 +202,9 @@
   .timeline { gap: 56px; }
 }
 
-/* ---------- Getting around: directions link under the heading ---------- */
-.guide-directions { margin: -24px 0 24px; }
-
-@media (min-width: 1024px) {
-  .guide-directions { margin: -56px 0 40px; }
-}
-
-/* ---------- 7. Closing: split cream panel and photo (Rooms uses a full photo band).
-   Cream, not navy, so it does not merge with the navy Perfect Day section above. ---------- */
-.closing-split {
-  display: grid;
-  background: var(--color-cream);
-  color: var(--color-text);
-}
-
-.closing-split__panel {
-  display: grid;
-  justify-items: start;
-  align-content: center;
-  gap: 24px;
-  padding: 56px var(--gutter);
-}
-.closing-split__panel h2 { max-width: 12em; }
-
-.closing-split__media { overflow: hidden; }
-.closing-split__media img {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-}
-
-@media (min-width: 900px) {
-  .closing-split { grid-template-columns: 5fr 7fr; min-height: 480px; }
-  .closing-split__panel { padding: 72px max(var(--gutter), calc((100vw - var(--container)) / 2)); padding-right: 48px; }
-  .closing-split__media img { aspect-ratio: auto; }
-}
-
 /* ---------- 6. Map ---------- */
+.location h2 + p { margin-bottom: 24px; }
+
 .map-wrap {
   position: relative;
   overflow: hidden;

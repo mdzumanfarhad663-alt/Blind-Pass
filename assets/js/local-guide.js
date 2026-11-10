@@ -70,4 +70,11 @@
     }, { passive: true });
     drawLine();
   }
+
+  /* ---------- Map: first tap restores color on touch screens ---------- */
+  var unlock = document.getElementById('map-unlock');
+  unlock.addEventListener('click', function () {
+    document.getElementById('map-wrap').classList.add('is-active');
+    unlock.remove();
+  });
 })();

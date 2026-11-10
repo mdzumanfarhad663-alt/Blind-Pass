@@ -115,7 +115,6 @@
     <section class="section section--lg guide-anchor" id="getting-around">
       <div class="container">
         <h2 class="section-title split">Getting Around</h2>
-        <p class="guide-directions reveal"><a class="text-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=7901+Blind+Pass+Rd,+St+Pete+Beach,+FL+33706" target="_blank" rel="noopener">Get directions to Blind Pass</a></p>
         <div class="way-cards">
           <article class="way-card reveal">
             <span class="way-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-footprints"></use></svg></span>
@@ -245,15 +244,19 @@
     </div>
   </section>
 
-  <!-- ============ 7. CLOSING CTA ============ -->
-  <!-- [CONFIRM IMAGE] Closing band is a still of the boardwalk from the current site's hero video. -->
-  <section class="closing-split">
-    <div class="closing-split__panel">
-      <h2 class="split">Stay close to all of it.</h2>
-      <a class="btn btn--primary reveal" href="https://hotels.cloudbeds.com/en/reservation/TorgMC?currency=usd">Book Now</a>
-    </div>
-    <div class="closing-split__media clip">
-      <img src="assets/img/local-guide-closing-boardwalk.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Waterfront boardwalk with shops and boats on a bright day.">
+  <!-- ============ 6. LOCATION ============ -->
+  <!-- Address, phone and email live in the footer, so this section shows only the map and directions. -->
+  <section class="section section--cream section--md">
+    <div class="container location">
+      <div class="map-wrap clip" id="map-wrap">
+        <iframe class="map" title="Map showing Blind Pass Resort Motel at 7901 Blind Pass Rd, St Pete Beach, FL 33706" src="https://www.google.com/maps?q=7901+Blind+Pass+Rd,+St+Pete+Beach,+FL+33706&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <button class="map-unlock" id="map-unlock" type="button" aria-label="Show map in color"></button>
+      </div>
+      <div>
+        <h2 class="split">Find Us</h2>
+        <p class="reveal">Every stop in this guide starts from our courtyard.</p>
+        <a class="btn btn--primary reveal" href="https://www.google.com/maps/dir/?api=1&amp;destination=7901+Blind+Pass+Rd,+St+Pete+Beach,+FL+33706" target="_blank" rel="noopener" aria-label="Get Directions to Blind Pass, opens in a new tab">Get Directions</a>
+      </div>
     </div>
   </section>
 </main>
