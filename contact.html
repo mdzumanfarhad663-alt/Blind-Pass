@@ -57,7 +57,10 @@
     "mainEntity": [
       { "@type": "Question", "name": "Do you allow pets?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, in select rooms. Pet fees apply and are discounted for longer stays." } },
       { "@type": "Question", "name": "Is there an elevator, and do you have accessible rooms?", "acceptedAnswer": { "@type": "Answer", "text": "There is no elevator, and the King Suite with Spa Tub is on the second floor. We have one ADA King Room with a roll-in shower and grab bars." } },
-      { "@type": "Question", "name": "How far is the beach?", "acceptedAnswer": { "@type": "Answer", "text": "A short walk to the Gulf." } }
+      { "@type": "Question", "name": "Do rooms have kitchens?", "acceptedAnswer": { "@type": "Answer", "text": "Most rooms have a kitchenette with a stovetop and sink. The Queen Studio has a mini-fridge and microwave." } },
+      { "@type": "Question", "name": "How far is the beach?", "acceptedAnswer": { "@type": "Answer", "text": "A short walk to the Gulf." } },
+      { "@type": "Question", "name": "Can a gift card be used for any room?", "acceptedAnswer": { "@type": "Answer", "text": "Contact our team to confirm." } },
+      { "@type": "Question", "name": "Can a gift card be used at other Coastal properties?", "acceptedAnswer": { "@type": "Answer", "text": "Contact our team to confirm." } }
     ]
   }
   </script>
@@ -334,32 +337,45 @@
     <div class="container">
       <div class="faq">
         <h2 class="split">Frequently Asked Questions</h2>
-        <div class="faq__list reveal">
-          <details class="faq__item">
-            <summary>Do you allow pets?</summary>
-            <!-- [CONFIRM] exact pet fee/limits -->
-            <p>Yes, in select rooms. Pet fees apply and are discounted for longer stays.</p>
-          </details>
-          <details class="faq__item">
-            <summary>Is there an elevator, and do you have accessible rooms?</summary>
-            <p>There is no elevator, and the King Suite with Spa Tub is on the second floor. We have one ADA King Room with a roll-in shower and grab bars.</p>
-          </details>
-          <details class="faq__item">
-            <summary>How far is the beach?</summary>
-            <p>A short walk to the Gulf.</p>
-          </details>
+        <div class="faq__groups">
+          <div class="faq__group reveal">
+            <h3 class="faq__group-title">Your Stay</h3>
+            <div class="faq__list">
+              <details class="faq__item">
+                <summary>Do you allow pets?</summary>
+                <!-- [CONFIRM] exact pet fee/limits -->
+                <p>Yes, in select rooms. Pet fees apply and are discounted for longer stays.</p>
+              </details>
+              <details class="faq__item">
+                <summary>Is there an elevator, and do you have accessible rooms?</summary>
+                <p>There is no elevator, and the King Suite with Spa Tub is on the second floor. We have one ADA King Room with a roll-in shower and grab bars.</p>
+              </details>
+              <details class="faq__item">
+                <summary>Do rooms have kitchens?</summary>
+                <p>Most rooms have a kitchenette with a stovetop and sink. The Queen Studio has a mini-fridge and microwave.</p>
+              </details>
+              <details class="faq__item">
+                <summary>How far is the beach?</summary>
+                <p>A short walk to the Gulf.</p>
+              </details>
+            </div>
+          </div>
+          <div class="faq__group reveal">
+            <h3 class="faq__group-title">Gift Cards</h3>
+            <div class="faq__list">
+              <details class="faq__item">
+                <summary>Can a gift card be used for any room?</summary>
+                <!-- [CONFIRM] whether a gift card can be used for any room -->
+                <p>Contact our team to confirm.</p>
+              </details>
+              <details class="faq__item">
+                <summary>Can a gift card be used at other Coastal properties?</summary>
+                <!-- [CONFIRM] whether a gift card can be used at other Coastal Collection properties -->
+                <p>Contact our team to confirm.</p>
+              </details>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 6. CLOSING CTA ============ -->
-  <section class="closing-band">
-    <div class="container closing-band__inner">
-      <h2 class="split">Ready when you are.</h2>
-      <div class="closing-band__actions reveal">
-        <a class="btn btn--primary" href="https://hotels.cloudbeds.com/en/reservation/TorgMC?currency=usd" target="_blank" rel="noopener">Book Now</a>
-        <a class="btn btn--outline-light btn--no-arrow" href="tel:+17276055352">Call or Text (727) 605-5352</a>
       </div>
     </div>
   </section>

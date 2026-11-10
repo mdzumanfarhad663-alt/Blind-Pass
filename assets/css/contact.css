@@ -497,6 +497,18 @@ html:not(.js) .tabpanel + .tabpanel { margin-top: 48px; }
 .contact-faq { background: var(--color-white); }
 .contact-faq .faq { margin-top: 0; }
 
+.faq__groups { margin-top: 12px; }
+.faq__group + .faq__group { margin-top: 40px; }
+
+@media (min-width: 1024px) {
+  .faq__groups { margin-top: 0; }
+}
+.faq__group-title {
+  margin-bottom: 8px;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+}
+
 /* ---------- 6. Closing band: rule separates it from the navy footer ---------- */
 .closing-band {
   padding-block: 40px;

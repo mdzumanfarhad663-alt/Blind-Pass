@@ -203,6 +203,13 @@
   .steps { grid-template-columns: repeat(3, 1fr); gap: 32px; }
 }
 
+.steps-help {
+  margin: 48px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-rule-light);
+}
+.steps-help a { display: inline-block; padding-block: 10px; color: var(--color-white); font-weight: var(--weight-bold); }
+
 /* ---------- 4. Perfect for ---------- */
 .occasions {
   display: grid;

@@ -41,10 +41,10 @@ If this folder sits inside a larger repository, set `rootDir: blindpass` on the 
 4. **[CONFIRM PHOTOS] Queen Studio Suite.** Cloudbeds only has low-resolution `microsoftteams-image` photos for this room. Marked in `rooms.html` and `assets/js/rooms.js`.
 5. **Exact pet fee and limits.** The Rooms and Contact pages say only that fees apply and are discounted the longer guests stay. Marked in `rooms.html` and `contact.html`.
 6. **[CONFIRM IMAGE] Local Guide images.** The hero uses the courtyard fountain photo from Home. Four place rows use property photos and hero-video stills until Jed sends real photos. The John's Pass row is not included, because its image is a frame from the property's own video. The closing band is a hero-video still. Marked in `local-guide.html`.
-7. **Gift card redemption.** Are cards redeemable at all Coastal Collection properties, or at Blind Pass only? The page answers "Contact our team to confirm." Marked in `gift-cards.html`.
-8. **Gift cards and room types.** Can a gift card be used for any room? The page answers "Contact our team to confirm." Marked in `gift-cards.html`.
+7. **Gift card redemption.** Are cards redeemable at all Coastal Collection properties, or at Blind Pass only? The Contact FAQ answers "Contact our team to confirm." Marked in `gift-cards.html` and `contact.html`.
+8. **Gift cards and room types.** Can a gift card be used for any room? The Contact FAQ answers "Contact our team to confirm." Marked in the Contact FAQ in `contact.html`.
 9. **Gift card delivery method.** Email or physical card. The How It Works copy makes no delivery promise. Marked in `gift-cards.html`.
-10. **[CONFIRM PHOTOS] Gift Cards hero and closing band.** The sources are 700 px and 799 px photos from the current booking engine, enlarged for this page. Ask for the original files. Marked in `gift-cards.html`.
+10. **[CONFIRM PHOTOS] Gift Cards hero.** The source is a 700 px photo from the current booking engine, enlarged for this page. Ask for the original file. Marked in `gift-cards.html`.
 11. **[CONFIRM PHOTOS] Contact hero.** The source is a 700 px aerial photo from the current booking engine, enlarged for this page. Ask for the original file. Marked in `contact.html`.
 
 ## Other Notes For The WordPress Build

@@ -191,7 +191,7 @@
   var track = $('#rooms-carousel');
   var prev = $('#rooms-prev');
   var next = $('#rooms-next');
-  var bar = $('#rooms-progress');
+  var dotsWrap = $('#rooms-dots');
   var scrollMode = reduced ? 'auto' : 'smooth';
 
   if (track) (function () {
@@ -205,20 +205,63 @@
     track.scrollBy({ left: direction * stepSize(), behavior: scrollMode });
   }
 
+  /* Dots: one per snap position. Cards that cannot reach the left edge share the last position. */
+  var targets = [];
+  var dots = [];
+
+  function buildDots() {
+    var cards = $$('.room', track);
+    var max = track.scrollWidth - track.clientWidth;
+    var base = cards[0].offsetLeft;
+    var labels = [];
+    targets = [];
+    cards.forEach(function (card, i) {
+      var left = Math.min(card.offsetLeft - base, max);
+      if (!targets.length || left - targets[targets.length - 1] > 8) {
+        targets.push(left);
+        labels.push(i + 1);
+      }
+    });
+    dotsWrap.textContent = '';
+    dots = targets.map(function (left, i) {
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'carousel-dot';
+      dot.setAttribute('aria-label', 'Go to room ' + labels[i]);
+      dot.setAttribute('aria-controls', 'rooms-carousel');
+      dot.appendChild(document.createElement('span'));
+      dot.addEventListener('click', function () { track.scrollTo({ left: targets[i], behavior: scrollMode }); });
+      dotsWrap.appendChild(dot);
+      return dot;
+    });
+  }
+
   function updateCarousel() {
     var max = track.scrollWidth - track.clientWidth;
-    var share = track.clientWidth / track.scrollWidth;
-    var done = max > 0 ? track.scrollLeft / max : 1;
-    bar.style.transform = 'scaleX(' + (share + (1 - share) * done).toFixed(4) + ')';
+    var nearest = 0;
+    targets.forEach(function (left, i) {
+      if (Math.abs(left - track.scrollLeft) < Math.abs(targets[nearest] - track.scrollLeft)) nearest = i;
+    });
+    dots.forEach(function (dot, i) {
+      if (i === nearest) dot.setAttribute('aria-current', 'true');
+      else dot.removeAttribute('aria-current');
+    });
     prev.disabled = track.scrollLeft <= 2;
     next.disabled = track.scrollLeft >= max - 2;
+  }
+
+  function refresh() {
+    var focused = dots.indexOf(document.activeElement);
+    buildDots();
+    updateCarousel();
+    if (focused > -1 && dots[Math.min(focused, dots.length - 1)]) dots[Math.min(focused, dots.length - 1)].focus();
   }
 
   prev.addEventListener('click', function () { move(-1); });
   next.addEventListener('click', function () { move(1); });
   track.addEventListener('scroll', updateCarousel, { passive: true });
-  window.addEventListener('resize', updateCarousel);
-  updateCarousel();
+  window.addEventListener('resize', refresh);
+  refresh();
 
   track.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowRight') { e.preventDefault(); move(1); }

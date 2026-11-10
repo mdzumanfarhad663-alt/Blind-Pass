@@ -306,9 +306,9 @@ html:not(.js) #filter-pets { display: none; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
+  min-width: 32px;
   height: 44px;
-  padding: 0;
+  padding: 0 4px;
   border: 0;
   border-radius: 50%;
   background: transparent;
@@ -318,13 +318,14 @@ html:not(.js) #filter-pets { display: none; }
   display: block;
   width: 8px;
   height: 8px;
-  border-radius: 50%;
-  background: var(--color-rule);
-  transition: background-color 0.2s, transform 0.2s;
+  border-radius: var(--radius-pill);
+  background: rgba(11, 13, 99, 0.3);
+  transition: width 0.3s var(--ease), background-color 0.3s;
 }
+/* Same shape as the Home slider dots; inactive dots are navy on this light background. */
 .gallery__dot[aria-current] span {
-  background: var(--color-navy);
-  transform: scale(1.3);
+  width: 24px;
+  background: var(--color-primary);
 }
 
 /* Tablet and desktop: main image with thumbnails */
