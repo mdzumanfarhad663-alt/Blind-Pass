@@ -343,6 +343,20 @@
     document.head.appendChild(script);
   }
 
+  /* ---------- Footer Coastal Collection toggle ---------- */
+  $$('.collection-wrap').forEach(function (wrap) {
+    var buttons = $$('.collection-toggle, .collection-more', wrap);
+    var label = $('.collection-more__label', wrap);
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var open = !wrap.classList.contains('is-open');
+        wrap.classList.toggle('is-open', open);
+        buttons.forEach(function (b) { b.setAttribute('aria-expanded', String(open)); });
+        label.textContent = open ? 'Show fewer' : 'View all properties';
+      });
+    });
+  });
+
   /* ---------- Rewards form: front-end only, confetti on success ---------- */
   function confetti(x, y) {
     var c = document.createElement('canvas');

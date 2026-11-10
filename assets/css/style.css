@@ -1319,17 +1319,34 @@ html:not(.js) .carousel { scrollbar-width: thin; padding-bottom: 12px; }
 
 .plain-list li + li { margin-top: 6px; }
 
-/* Coastal Collection: closed by default, the plus turns into a close mark when open */
-.collection-toggle summary {
+/* Coastal Collection. Phones: title toggles the whole list. Desktop: 4 show, "View all" shows the rest.
+   Without JavaScript the full list shows and both buttons are hidden. */
+.collection-title { display: none; }
+html:not(.js) .collection-title { display: block; }
+html:not(.js) .collection-toggle,
+html:not(.js) .collection-more { display: none; }
+
+.collection-toggle,
+.collection-more {
   display: inline-flex;
   align-items: center;
   gap: 12px;
   min-height: 44px;
-  margin-bottom: 0;
+  padding: 0;
+  border: 0;
+  background: none;
   cursor: pointer;
-  list-style: none;
 }
-.collection-toggle summary::-webkit-details-marker { display: none; }
+.collection-toggle { margin-bottom: 0; }
+
+.collection-more {
+  display: none;
+  margin-top: 4px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: var(--weight-bold);
+  color: var(--color-coral);
+}
 
 .collection-toggle__icon {
   position: relative;
@@ -1350,15 +1367,28 @@ html:not(.js) .carousel { scrollbar-width: thin; padding-bottom: 12px; }
   background: currentColor;
 }
 .collection-toggle__icon::after { transform: rotate(90deg); }
-.collection-toggle[open] .collection-toggle__icon { transform: rotate(45deg); }
+.collection-wrap.is-open .collection-toggle__icon { transform: rotate(45deg); }
 
-.collection-toggle[open] .collection {
+.js .collection-wrap:not(.is-open) .collection { display: none; }
+.collection-wrap.is-open .collection {
   margin-top: 8px;
   animation: fade-up 0.35s ease-out both;
 }
 
+@media (min-width: 960px) {
+  .js .collection-title { display: block; }
+  .js .collection-toggle { display: none; }
+  .js .collection-more { display: inline-flex; }
+
+  .js .collection-wrap:not(.is-open) .collection { display: block; }
+  .js .collection-wrap:not(.is-open) .collection li:nth-child(n+5) { display: none; }
+  .collection-wrap.is-open .collection { margin-top: 0; animation: none; }
+  .collection-wrap.is-open .collection li:nth-child(n+5) { animation: fade-up 0.35s ease-out both; }
+}
+
 @media (hover: hover) {
-  .collection-toggle summary:hover { color: var(--color-white); }
+  .collection-toggle:hover,
+  .collection-more:hover { color: var(--color-white); }
 }
 
 .site-footer__wordmark {
