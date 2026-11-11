@@ -112,10 +112,11 @@ window.BP_ROOMS = [
     secondFloor: false,
     description: 'A spacious room with one King bed and a kitchenette with a stovetop, mini-fridge, microwave and sink. It has one bathroom with a shower (no tub). You will find it on the ground level, in the courtyard.',
     photos: [
-      { src: 'king-suite-01.webp', alt: 'King Suite bedroom with a King bed and dresser' },
-      { src: 'king-suite-02.webp', alt: 'King Suite seating nook with an arched opening into the bedroom' },
-      { src: 'king-suite-03.webp', alt: 'King Suite kitchenette with stovetop, mini-fridge, microwave and sink' },
-      { src: 'king-suite-04.webp', alt: 'King Suite bathroom with a shower' }
+      { src: 'king-suite-01.webp', alt: 'King Suite with a King bed, a fireplace and the kitchenette at the far end of the room' },
+      { src: 'king-suite-02.webp', alt: 'King Suite King bed against a blue accent wall, with an arched doorway and a small table' },
+      { src: 'king-suite-03.webp', alt: 'King Suite fireplace, wall-mounted TV and dresser beside the King bed' },
+      { src: 'king-suite-04.webp', alt: 'King Suite kitchenette with a stovetop, microwave, sink, coffee maker and mini-fridge' },
+      { src: 'king-suite-05.webp', alt: 'King Suite bathroom with a shower, toilet and vanity sink' }
     ]
   },
   {
@@ -192,8 +193,8 @@ window.BP_ROOMS = [
     slug: 'two-bedroom',
     rid: '492340',
     name: 'Two Bedroom',
-    beds: '2 Queens + pullout sofa',
-    bedDetails: [{ type: 'Queen', count: 2 }, { type: 'Pullout sofa', count: 1 }],
+    beds: '2 Fulls + pullout sofa',
+    bedDetails: [{ type: 'Full', count: 2 }, { type: 'Pullout sofa', count: 1 }],
     sleeps: 5,
     bathroom: 'One bathroom',
     location: 'Poolside · Ground level',
@@ -203,11 +204,11 @@ window.BP_ROOMS = [
     jacuzzi: false,
     pullout: true,
     secondFloor: false,
-    description: 'Two separate bedrooms with a Queen in each, a pullout sofa and a kitchenette make this our roomiest layout for families and friends. It sits on the ground level, right by the pool.',
+    description: 'Two separate bedrooms with a Full bed in each, a pullout sofa and a kitchenette make this our roomiest layout for families and friends. It sits on the ground level, right by the pool.',
     photos: [
       { src: 'two-bedroom-01.webp', alt: 'Two Bedroom living area with pullout sofa and a view toward a bedroom' },
       { src: 'two-bedroom-02.webp', alt: 'Two Bedroom seating area with an open doorway to a bedroom' },
-      { src: 'two-bedroom-03.webp', alt: 'Two Bedroom bedroom with a Queen bed and wall-mounted TV' },
+      { src: 'two-bedroom-03.webp', alt: 'Two Bedroom bedroom with a Full bed and wall-mounted TV' },
       { src: 'two-bedroom-04.webp', alt: 'Two Bedroom bathroom with an anchor-print shower curtain' }
     ]
   }
