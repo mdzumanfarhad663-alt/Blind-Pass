@@ -292,17 +292,12 @@ a { color: inherit; }
   gap: 24px;
 }
 
-/* Cream pill keeps the navy "Pass" and "RESORT" readable over the video.
-   If the header ever gets a solid cream state, add .is-solid to drop the pill. */
+/* Transparent logo straight on the header, no pill (client request).
+   The menu and footer keep the cream pill because they are navy. */
 .site-header__logo {
   display: block;
   flex: none;
-  padding: 8px 14px;
-  border-radius: 16px;
-  background: rgba(253, 240, 232, 0.92);
-  box-shadow: 0 2px 10px rgba(11, 13, 99, 0.18);
 }
-.site-header.is-solid .site-header__logo { background: transparent; box-shadow: none; }
 .site-header__logo img { width: auto; height: 44px; }
 
 .site-nav, .site-header__book { display: none; }
