@@ -99,14 +99,14 @@
   transform: translateZ(28px);
 }
 
-/* White plate, as in the site header: the logo wordmark is dark gray. */
+/* Cream pill, as in the site header: keeps the navy wordmark readable. */
 .gift-card__logo {
   box-sizing: border-box;
-  width: 54%;
-  max-width: 280px;
-  padding: 8px 12px;
-  border-radius: var(--radius-sm);
-  background: var(--color-white);
+  width: 40%;
+  max-width: 200px;
+  padding: 6px 10px;
+  border-radius: 16px;
+  background: rgba(253, 240, 232, 0.92);
 }
 
 .gift-card__label {
