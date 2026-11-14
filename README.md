@@ -62,4 +62,4 @@ If this folder sits inside a larger repository, set `rootDir: blindpass` on the 
 
 ## Licensed photos
 
-The Beach & Sunsets, John's Pass, Fort De Soto and Busch Gardens photos (`assets/img/guide/`) come from Wikimedia Commons under CC BY 3.0 / CC BY-SA 4.0. Each one **must keep its visible credit line**: a caption under the photo on Local Guide (`.photo-credit`) and a small line on the Home Explore tile (`.tile__credit`). Sources, authors, licenses and exact credit lines are in `../wp-upload/local-guide/CREDITS.md`.
+The Beach & Sunsets, John's Pass, Fort De Soto and Busch Gardens photos (`assets/img/guide/`) come from Wikimedia Commons under CC BY 3.0 / CC BY-SA 4.0. Each one **must keep its visible credit line**: a caption under the photo on Local Guide (`.photo-credit`). The Home Explore tiles reuse the same photos without a label; the Local Guide captions are the site's credit for them. Sources, authors, licenses and exact credit lines are in `../wp-upload/local-guide/CREDITS.md`.
