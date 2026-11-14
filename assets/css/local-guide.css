@@ -113,6 +113,9 @@
   padding-block: 64px 80px;
 }
 
+/* Figure holds the photo and, for licensed photos, the credit line. */
+.place-figure { margin: 0; min-width: 0; }
+
 .place-media {
   overflow: hidden;
   border-radius: var(--radius);
@@ -125,6 +128,15 @@
   object-fit: cover;
   transition: transform 1.6s ease-out;
 }
+
+/* Photo credit (CC BY / BY-SA photos): small and muted, under the image. */
+.photo-credit {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(42, 44, 85, 0.7);
+}
+.photo-credit a { color: inherit; }
 
 .good-for {
   margin-bottom: 8px;
@@ -142,8 +154,8 @@
 @media (min-width: 1024px) {
   .place-list { gap: 112px; padding-block: 96px 128px; }
 
-  .place-media { grid-column: 1 / span 7; }
-  .room-row:nth-child(even) .place-media { grid-column: 6 / span 7; grid-row: 1; }
+  .place-figure { grid-column: 1 / span 7; }
+  .room-row:nth-child(even) .place-figure { grid-column: 6 / span 7; grid-row: 1; }
 }
 
 /* ---------- 5. Perfect day timeline ---------- */
